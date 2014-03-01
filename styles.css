@@ -1,0 +1,60 @@
+body {
+	display: table;
+	margin: auto;
+	width: 1200px;
+}
+a:link{
+	text-decoration:none;
+	color:"#0000A0";
+}
+a:visited{
+	text-decoration:none;
+	color:"#0000A0";
+}
+a:active{
+	text-decoration:none;
+	color:"#0000A0";
+}
+a:hover{
+	text-decoration:underline;
+}
+#chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
+	display: table;
+	margin: auto;
+}
+
+#para {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	margin-bottom: 15px;
+	margin-left:150px;
+	margin-right:150px;
+	min-width:10px;
+	max-width:1200px;
+}
+#cont {
+	font-size:13px;
+	margin-left:8px;
+	margin-top:4px;
+}
+#nav {
+	margin-top: 100px;
+	position: fixed;
+	float:left;
+	border-style: solid;
+	border-width: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:10px;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	text-decoration: underline;
+	text-align: center;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	text-align: center;
+}

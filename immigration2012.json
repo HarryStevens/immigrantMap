@@ -1,0 +1,821 @@
+{
+    "immData": [
+        {
+            "Country": "Afghanistan",
+            "Immigrants": 1617
+        },
+        {
+            "Country": "Albania",
+            "Immigrants": 3364
+        },
+        {
+            "Country": "Algeria",
+            "Immigrants": 1369
+        },
+        {
+            "Country": "American Samoa",
+            "Immigrants": 0
+        },
+        {
+            "Country": "Angola",
+            "Immigrants": 187
+        },
+        {
+            "Country": "Anguilla",
+            "Immigrants": 23
+        },
+        {
+            "Country": "Antigua-Barbuda",
+            "Immigrants": 337
+        },
+        {
+            "Country": "Argentina",
+            "Immigrants": 4359
+        },
+        {
+            "Country": "Armenia",
+            "Immigrants": 2681
+        },
+        {
+            "Country": "Aruba",
+            "Immigrants": 54
+        },
+        {
+            "Country": "Australia",
+            "Immigrants": 2414
+        },
+        {
+            "Country": "Austria",
+            "Immigrants": 407
+        },
+        {
+            "Country": "Azerbaijan",
+            "Immigrants": 663
+        },
+        {
+            "Country": "Bahamas",
+            "Immigrants": 619
+        },
+        {
+            "Country": "Bahrain",
+            "Immigrants": 104
+        },
+        {
+            "Country": "Bangladesh",
+            "Immigrants": 14705
+        },
+        {
+            "Country": "Barbados",
+            "Immigrants": 460
+        },
+        {
+            "Country": "Belarus",
+            "Immigrants": 1659
+        },
+        {
+            "Country": "Belgium",
+            "Immigrants": 574
+        },
+        {
+            "Country": "Belize",
+            "Immigrants": 847
+        },
+        {
+            "Country": "Benin",
+            "Immigrants": 415
+        },
+        {
+            "Country": "Bermuda",
+            "Immigrants": 85
+        },
+        {
+            "Country": "Bhutan",
+            "Immigrants": 10198
+        },
+        {
+            "Country": "Bolivia",
+            "Immigrants": 1948
+        },
+        {
+            "Country": "Bosnia-Herzegovina",
+            "Immigrants": 815
+        },
+        {
+            "Country": "Botswana",
+            "Immigrants": 80
+        },
+        {
+            "Country": "Brazil",
+            "Immigrants": 11441
+        },
+        {
+            "Country": "British Virgin Islands",
+            "Immigrants": 39
+        },
+        {
+            "Country": "Brunei",
+            "Immigrants": 19
+        },
+        {
+            "Country": "Bulgaria",
+            "Immigrants": 2440
+        },
+        {
+            "Country": "Burkina Faso",
+            "Immigrants": 558
+        },
+        {
+            "Country": "Myanmar",
+            "Immigrants": 17383
+        },
+        {
+            "Country": "Burundi",
+            "Immigrants": 535
+        },
+        {
+            "Country": "Cambodia",
+            "Immigrants": 2473
+        },
+        {
+            "Country": "Cameroon",
+            "Immigrants": 3815
+        },
+        {
+            "Country": "Canada",
+            "Immigrants": 12932
+        },
+        {
+            "Country": "Cape Verde",
+            "Immigrants": 1684
+        },
+        {
+            "Country": "Cayman Islands",
+            "Immigrants": 44
+        },
+        {
+            "Country": "Central African Republic",
+            "Immigrants": 116
+        },
+        {
+            "Country": "Chad",
+            "Immigrants": 155
+        },
+        {
+            "Country": "Chile",
+            "Immigrants": 1673
+        },
+        {
+            "Country": "China",
+            "Immigrants": 81784
+        },
+        {
+            "Country": "Colombia",
+            "Immigrants": 20931
+        },
+        {
+            "Country": "Comoros",
+            "Immigrants": 10
+        },
+        {
+            "Country": "Democratic Republic of Congo",
+            "Immigrants": 3731
+        },
+        {
+            "Country": "Republic of Congo",
+            "Immigrants": 1461
+        },
+        {
+            "Country": "Costa Rica",
+            "Immigrants": 2020
+        },
+        {
+            "Country": "Cote d'Ivoire",
+            "Immigrants": 1760
+        },
+        {
+            "Country": "Croatia",
+            "Immigrants": 336
+        },
+        {
+            "Country": "Cuba",
+            "Immigrants": 32820
+        },
+        {
+            "Country": "Cyprus",
+            "Immigrants": 107
+        },
+        {
+            "Country": "Czech Republic",
+            "Immigrants": 677
+        },
+        {
+            "Country": "Czechoslovakia (former)",
+            "Immigrants": 159
+        },
+        {
+            "Country": "Denmark",
+            "Immigrants": 459
+        },
+        {
+            "Country": "Djibouti",
+            "Immigrants": 106
+        },
+        {
+            "Country": "Dominica",
+            "Immigrants": 125
+        },
+        {
+            "Country": "Dominican Republic",
+            "Immigrants": 41566
+        },
+        {
+            "Country": "Ecuador",
+            "Immigrants": 9342
+        },
+        {
+            "Country": "Egypt",
+            "Immigrants": 8988
+        },
+        {
+            "Country": "El Salvador",
+            "Immigrants": 16256
+        },
+        {
+            "Country": "Equatorial Guinea",
+            "Immigrants": 20
+        },
+        {
+            "Country": "Eritrea",
+            "Immigrants": 2643
+        },
+        {
+            "Country": "Estonia",
+            "Immigrants": 227
+        },
+        {
+            "Country": "Ethiopia",
+            "Immigrants": 14544
+        },
+        {
+            "Country": "Fiji",
+            "Immigrants": 853
+        },
+        {
+            "Country": "Finland",
+            "Immigrants": 348
+        },
+        {
+            "Country": "France",
+            "Immigrants": 3862
+        },
+        {
+            "Country": "French Polynesia",
+            "Immigrants": 30
+        },
+        {
+            "Country": "Gabon",
+            "Immigrants": 197
+        },
+        {
+            "Country": "Gambia",
+            "Immigrants": 1159
+        },
+        {
+            "Country": "Georgia",
+            "Immigrants": 1341
+        },
+        {
+            "Country": "Germany",
+            "Immigrants": 5812
+        },
+        {
+            "Country": "Ghana",
+            "Immigrants": 10592
+        },
+        {
+            "Country": "Greece",
+            "Immigrants": 1054
+        },
+        {
+            "Country": "Grenada",
+            "Immigrants": 671
+        },
+        {
+            "Country": "Guatemala",
+            "Immigrants": 10341
+        },
+        {
+            "Country": "Guinea",
+            "Immigrants": 1656
+        },
+        {
+            "Country": "Guinea-Bissau",
+            "Immigrants": 47
+        },
+        {
+            "Country": "Guyana",
+            "Immigrants": 5683
+        },
+        {
+            "Country": "Haiti",
+            "Immigrants": 22818
+        },
+        {
+            "Country": "Honduras",
+            "Immigrants": 6884
+        },
+        {
+            "Country": "Hong Kong",
+            "Immigrants": 2104
+        },
+        {
+            "Country": "Hungary",
+            "Immigrants": 1054
+        },
+        {
+            "Country": "Iceland",
+            "Immigrants": 103
+        },
+        {
+            "Country": "India",
+            "Immigrants": 66434
+        },
+        {
+            "Country": "Indonesia",
+            "Immigrants": 2603
+        },
+        {
+            "Country": "Iran",
+            "Immigrants": 12916
+        },
+        {
+            "Country": "Iraq",
+            "Immigrants": 20369
+        },
+        {
+            "Country": "Ireland",
+            "Immigrants": 1514
+        },
+        {
+            "Country": "Israel",
+            "Immigrants": 4153
+        },
+        {
+            "Country": "Italy",
+            "Immigrants": 2673
+        },
+        {
+            "Country": "Jamaica",
+            "Immigrants": 20705
+        },
+        {
+            "Country": "Japan",
+            "Immigrants": 6061
+        },
+        {
+            "Country": "Jordan",
+            "Immigrants": 4099
+        },
+        {
+            "Country": "Kazakhstan",
+            "Immigrants": 1202
+        },
+        {
+            "Country": "Kenya",
+            "Immigrants": 7043
+        },
+        {
+            "Country": "Kiribati",
+            "Immigrants": 6
+        },
+        {
+            "Country": "Korea, North",
+            "Immigrants": 49
+        },
+        {
+            "Country": "Korea, South 1",
+            "Immigrants": 20846
+        },
+        {
+            "Country": "Kosovo",
+            "Immigrants": 782
+        },
+        {
+            "Country": "Kuwait",
+            "Immigrants": 1044
+        },
+        {
+            "Country": "Kyrgyzstan",
+            "Immigrants": 648
+        },
+        {
+            "Country": "Laos",
+            "Immigrants": 949
+        },
+        {
+            "Country": "Latvia",
+            "Immigrants": 436
+        },
+        {
+            "Country": "Lebanon",
+            "Immigrants": 2879
+        },
+        {
+            "Country": "Lesotho",
+            "Immigrants": 17
+        },
+        {
+            "Country": "Liberia",
+            "Immigrants": 4109
+        },
+        {
+            "Country": "Libya",
+            "Immigrants": 315
+        },
+        {
+            "Country": "Lithuania",
+            "Immigrants": 924
+        },
+        {
+            "Country": "Luxembourg",
+            "Immigrants": 19
+        },
+        {
+            "Country": "Macau",
+            "Immigrants": 120
+        },
+        {
+            "Country": "Macedonia",
+            "Immigrants": 906
+        },
+        {
+            "Country": "Madagascar",
+            "Immigrants": 79
+        },
+        {
+            "Country": "Malawi",
+            "Immigrants": 192
+        },
+        {
+            "Country": "Malaysia",
+            "Immigrants": 2605
+        },
+        {
+            "Country": "Maldives",
+            "Immigrants": 0
+        },
+        {
+            "Country": "Mali",
+            "Immigrants": 734
+        },
+        {
+            "Country": "Malta",
+            "Immigrants": 62
+        },
+        {
+            "Country": "Marshall Islands",
+            "Immigrants": 50
+        },
+        {
+            "Country": "Mauritania",
+            "Immigrants": 410
+        },
+        {
+            "Country": "Mauritius",
+            "Immigrants": 77
+        },
+        {
+            "Country": "Mexico",
+            "Immigrants": 146406
+        },
+        {
+            "Country": "Micronesia, Federated States",
+            "Immigrants": 13
+        },
+        {
+            "Country": "Moldova",
+            "Immigrants": 2021
+        },
+        {
+            "Country": "Monaco",
+            "Immigrants": 5
+        },
+        {
+            "Country": "Mongolia",
+            "Immigrants": 691
+        },
+        {
+            "Country": "Montenegro",
+            "Immigrants": 265
+        },
+        {
+            "Country": "Montserrat",
+            "Immigrants": 27
+        },
+        {
+            "Country": "Morocco",
+            "Immigrants": 3656
+        },
+        {
+            "Country": "Mozambique",
+            "Immigrants": 94
+        },
+        {
+            "Country": "Namibia",
+            "Immigrants": 59
+        },
+        {
+            "Country": "Nepal",
+            "Immigrants": 11312
+        },
+        {
+            "Country": "Netherlands",
+            "Immigrants": 1091
+        },
+        {
+            "Country": "Netherlands Antilles",
+            "Immigrants": 106
+        },
+        {
+            "Country": "New Caledonia",
+            "Immigrants": 3
+        },
+        {
+            "Country": "New Zealand",
+            "Immigrants": 814
+        },
+        {
+            "Country": "Nicaragua",
+            "Immigrants": 3046
+        },
+        {
+            "Country": "Niger",
+            "Immigrants": 48
+        },
+        {
+            "Country": "Nigeria",
+            "Immigrants": 13575
+        },
+        {
+            "Country": "Norway",
+            "Immigrants": 276
+        },
+        {
+            "Country": "Oman",
+            "Immigrants": 74
+        },
+        {
+            "Country": "Pakistan",
+            "Immigrants": 14740
+        },
+        {
+            "Country": "Palau",
+            "Immigrants": 10
+        },
+        {
+            "Country": "Panama",
+            "Immigrants": 1281
+        },
+        {
+            "Country": "Papua New Guinea",
+            "Immigrants": 21
+        },
+        {
+            "Country": "Paraguay",
+            "Immigrants": 467
+        },
+        {
+            "Country": "Peru",
+            "Immigrants": 12609
+        },
+        {
+            "Country": "Philippines",
+            "Immigrants": 57327
+        },
+        {
+            "Country": "Poland",
+            "Immigrants": 6300
+        },
+        {
+            "Country": "Portugal",
+            "Immigrants": 811
+        },
+        {
+            "Country": "Qatar",
+            "Immigrants": 141
+        },
+        {
+            "Country": "Romania",
+            "Immigrants": 3748
+        },
+        {
+            "Country": "Russia",
+            "Immigrants": 9969
+        },
+        {
+            "Country": "Rwanda",
+            "Immigrants": 592
+        },
+        {
+            "Country": "Saint Kitts-Nevis",
+            "Immigrants": 311
+        },
+        {
+            "Country": "Saint Lucia",
+            "Immigrants": 919
+        },
+        {
+            "Country": "Saint Vincent and the Grenadines",
+            "Immigrants": 503
+        },
+        {
+            "Country": "Samoa",
+            "Immigrants": 238
+        },
+        {
+            "Country": "Sao Tome and Principe",
+            "Immigrants": 12
+        },
+        {
+            "Country": "Saudi Arabia",
+            "Immigrants": 1343
+        },
+        {
+            "Country": "Senegal",
+            "Immigrants": 1615
+        },
+        {
+            "Country": "Serbia",
+            "Immigrants": 704
+        },
+        {
+            "Country": "Serbia and Montenegro 2",
+            "Immigrants": 801
+        },
+        {
+            "Country": "Seychelles",
+            "Immigrants": 7
+        },
+        {
+            "Country": "Sierra Leone",
+            "Immigrants": 1688
+        },
+        {
+            "Country": "Singapore",
+            "Immigrants": 712
+        },
+        {
+            "Country": "Slovakia",
+            "Immigrants": 528
+        },
+        {
+            "Country": "Slovenia",
+            "Immigrants": 86
+        },
+        {
+            "Country": "Solomon Islands",
+            "Immigrants": 0
+        },
+        {
+            "Country": "Somalia",
+            "Immigrants": 5204
+        },
+        {
+            "Country": "South Africa",
+            "Immigrants": 2781
+        },
+        {
+            "Country": "South Sudan",
+            "Immigrants": 17
+        },
+        {
+            "Country": "Soviet Union (former)",
+            "Immigrants": 1296
+        },
+        {
+            "Country": "Spain",
+            "Immigrants": 1842
+        },
+        {
+            "Country": "Sri Lanka",
+            "Immigrants": 1994
+        },
+        {
+            "Country": "Sudan",
+            "Immigrants": 2471
+        },
+        {
+            "Country": "Suriname",
+            "Immigrants": 187
+        },
+        {
+            "Country": "Swaziland",
+            "Immigrants": 24
+        },
+        {
+            "Country": "Sweden",
+            "Immigrants": 968
+        },
+        {
+            "Country": "Switzerland",
+            "Immigrants": 635
+        },
+        {
+            "Country": "Syria",
+            "Immigrants": 3014
+        },
+        {
+            "Country": "Taiwan",
+            "Immigrants": 5331
+        },
+        {
+            "Country": "Tajikistan",
+            "Immigrants": 411
+        },
+        {
+            "Country": "Tanzania",
+            "Immigrants": 1516
+        },
+        {
+            "Country": "Thailand",
+            "Immigrants": 9459
+        },
+        {
+            "Country": "Togo",
+            "Immigrants": 1756
+        },
+        {
+            "Country": "Tonga",
+            "Immigrants": 276
+        },
+        {
+            "Country": "Trinidad and Tobago",
+            "Immigrants": 5214
+        },
+        {
+            "Country": "Tunisia",
+            "Immigrants": 422
+        },
+        {
+            "Country": "Turkey",
+            "Immigrants": 4162
+        },
+        {
+            "Country": "Turkmenistan",
+            "Immigrants": 223
+        },
+        {
+            "Country": "Turks and Caicos Islands",
+            "Immigrants": 30
+        },
+        {
+            "Country": "U.S. Virgin Islands",
+            "Immigrants": 0
+        },
+        {
+            "Country": "Uganda",
+            "Immigrants": 1340
+        },
+        {
+            "Country": "Ukraine",
+            "Immigrants": 7642
+        },
+        {
+            "Country": "United Arab Emirates",
+            "Immigrants": 854
+        },
+        {
+            "Country": "United Kingdom",
+            "Immigrants": 12014
+        },
+
+        {
+            "Country": "Uruguay",
+            "Immigrants": 1374
+        },
+        {
+            "Country": "Uzbekistan",
+            "Immigrants": 4726
+        },
+        {
+            "Country": "Venezuela",
+            "Immigrants": 9387
+        },
+        {
+            "Country": "Vietnam",
+            "Immigrants": 28304
+        },
+        {
+            "Country": "Yemen",
+            "Immigrants": 2620
+        },
+        {
+            "Country": "Zambia",
+            "Immigrants": 643
+        },
+        {
+            "Country": "Zimbabwe",
+            "Immigrants": 914
+        }
+    ]
+}

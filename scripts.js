@@ -32,6 +32,7 @@ function immData(imm2012){
 		width:900,
 		keepAspectRatio:true,
 		forceIFrame:true,
+		backgroundColor:{stroke:'#000',strokeWidth:4}
 	};
 	var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
 	chart.draw(data, options);
@@ -42,6 +43,7 @@ function immData(imm2012){
 		keepAspectRatio:true,
 		forceIFrame:true,
 		region:'019',
+		backgroundColor:{stroke:'#000',strokeWidth:4}
 	}
 	var amChart = new google.visualization.GeoChart(document.getElementById('am_div'));
 	amChart.draw(data, amOptions);
@@ -52,6 +54,7 @@ function immData(imm2012){
 		keepAspectRatio:true,
 		forceIFrame:true,
 		region:'002',
+		backgroundColor:{stroke:'#000',strokeWidth:4}
 	}
 	var afrChart = new google.visualization.GeoChart(document.getElementById('afr_div'));
 	afrChart.draw(data, afrOptions);
@@ -62,6 +65,7 @@ function immData(imm2012){
 		keepAspectRatio:true,
 		forceIFrame:true,
 		region:'142',
+		backgroundColor:{stroke:'#000',strokeWidth:4}
 	}
 	var asiaChart = new google.visualization.GeoChart(document.getElementById('asia_div'));
 	asiaChart.draw(data, asiaOptions);
@@ -72,6 +76,7 @@ function immData(imm2012){
 		keepAspectRatio:true,
 		forceIFrame:true,
 		region:'150',
+		backgroundColor:{stroke:'#000',strokeWidth:4}	
 	}
 	var eurChart = new google.visualization.GeoChart(document.getElementById('eur_div'));
 	eurChart.draw(data, eurOptions);
@@ -82,9 +87,8 @@ function immData(imm2012){
 		keepAspectRatio:true,
 		forceIFrame:true,
 		region:'009',
+		backgroundColor:{stroke:'#000',strokeWidth:4}		
 	}
 	var ocChart = new google.visualization.GeoChart(document.getElementById('oc_div'));
 	ocChart.draw(data, ocOptions);
-	
-
 }

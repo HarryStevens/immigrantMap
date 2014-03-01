@@ -2,7 +2,7 @@ body {
 	display: table;
 	margin: auto;
 	width: 1200px;
-	background-color:#f3f3f3;
+	background-color: #f3f3f3;
 }
 a:link {
 	text-decoration: none;
@@ -40,14 +40,14 @@ a:hover {
 	margin-top: 4px;
 }
 #nav {
-	margin-top:36px;
+	margin-top: 36px;
 	position: fixed;
 	float: left;
 	border-style: solid;
 	border-width: 2px;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 10px;
-	background-color:#fff;
+	background-color: #fff;
 }
 h1 {
 	font-family: Arial, Helvetica, sans-serif;

@@ -24,7 +24,7 @@ a:hover {
 	margin: auto;
 }
 
-#para {
+.para {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	text-align: left;
@@ -34,7 +34,7 @@ a:hover {
 	min-width: 10px;
 	max-width: 1200px;
 }
-#cont {
+.cont {
 	font-size: 13px;
 	margin-left: 8px;
 	margin-top: 4px;

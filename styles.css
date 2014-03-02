@@ -2,28 +2,31 @@ body {
 	display: table;
 	margin: auto;
 	width: 1200px;
-	background-color: #f3f3f3;
+	background-color: #f5f5f5;
 }
 a:link {
 	text-decoration: none;
-	color: "#0000A0";
+	color: #0077ee;
 }
 a:visited {
 	text-decoration: none;
-	color: "#0000A0";
+	color: #0077ee;
+}
+a:hover {
+	text-decoration: none;
+	color: #CD2626;
 }
 a:active {
 	text-decoration: none;
-	color: "#0000A0";
-}
-a:hover {
-	text-decoration: underline;
+	color: #0077ee;
 }
 #chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
 	display: table;
 	margin: auto;
 }
-
+.space {
+	margin-bottom:100px;
+}
 .para {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;

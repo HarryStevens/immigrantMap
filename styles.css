@@ -1,5 +1,19 @@
-body{
-	margin:0;
+body {
+	margin: 0;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+	font-family: Georgia;
+	margin-top: 0px;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	text-align: center;
 }
 a:link {
 	text-decoration: none;
@@ -22,30 +36,40 @@ a:active {
 	margin: auto;
 	z-index: 1;
 }
-#headerWrapper {
-	background: none repeat scroll 0 0 #2F4779;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-    display: block;
-    padding: 10px 0;
-    position: fixed;
-    width:100%;
-    z-index:2;
-}
 #bodyWrapper {
 	display: table;
 	margin: 0 auto;
 	background-color: #f5f5f5;
-	padding:0px;
-	width:100%;
+	padding: 0px;
+	width: 100%;
+}
+#headerWrapper {
+	background: none repeat scroll 0 0 #2F4779;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+	display: block;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+#nav {
+	margin-top: 58px;
+	position: fixed;
+	border-style: solid;
+	border-width: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;
+	background-color: #fff;
 }
 #textWrapper {
-	width:1200px;
-	margin:auto;
-	margin-top:120px;
-	display:table;
+	width: 1200px;
+	margin: auto;
+	margin-top: 120px;
+	display: table;
 }
 .space {
-	margin-bottom:69px;
+	margin-bottom: 69px;
 }
 .para {
 	font-family: Arial, Helvetica, sans-serif;
@@ -58,12 +82,13 @@ a:active {
 	max-width: 1200px;
 }
 .center {
-	text-align:center;
+	text-align: center;
 }
 .footer {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	text-align: left;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: 152px;
 	margin-right: 152px;
@@ -74,27 +99,4 @@ a:active {
 	font-size: 13px;
 	margin-left: 8px;
 	margin-top: 4px;
-}
-#nav {
-	margin-top: 58px;
-	position: fixed;
-	border-style: solid;
-	border-width: 2px;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 10px;
-	background-color: #fff;
-}
-h1 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
-	text-align: center;
-	color:#fff;
-	font-weight:normal;
-	font-family:Georgia;
-	margin-top:0px;
-}
-h2 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	text-align: center;
 }

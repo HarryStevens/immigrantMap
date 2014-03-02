@@ -20,13 +20,16 @@ a:active {
 #chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
 	display: table;
 	margin: auto;
+	z-index: 1;
 }
 #headerWrapper {
 	background: none repeat scroll 0 0 #2F4779;
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     display: block;
     padding: 10px 0;
-    position: relative;
+    position: fixed;
+    width:100%;
+    z-index:2;
 }
 #bodyWrapper {
 	display: table;
@@ -38,10 +41,11 @@ a:active {
 #textWrapper {
 	width:1200px;
 	margin:auto;
+	margin-top:120px;
 	display:table;
 }
 .space {
-	margin-bottom:100px;
+	margin-bottom:69px;
 }
 .para {
 	font-family: Arial, Helvetica, sans-serif;
@@ -52,6 +56,9 @@ a:active {
 	margin-right: 152px;
 	min-width: 10px;
 	max-width: 1200px;
+}
+.center {
+	text-align:center;
 }
 .footer {
 	font-family: Arial, Helvetica, sans-serif;
@@ -83,7 +90,8 @@ h1 {
 	text-align: center;
 	color:#fff;
 	font-weight:normal;
-	font-family:Georgia
+	font-family:Georgia;
+	margin-top:0px;
 }
 h2 {
 	font-family: Arial, Helvetica, sans-serif;

@@ -18,7 +18,7 @@ function googleLoaded() {
 function immData(imm2012) {
 	var dataObj = imm2012.immData;
 	var dataArray = [];
-	var dataHeaders = ["Country", "New LPRs"];
+	var dataHeaders = ["Country", "Green cards"];
 	dataArray.push(dataHeaders);
 	for (var i = 0; i < dataObj.length; i++) {
 		var currObj = dataObj[i];

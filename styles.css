@@ -2,19 +2,30 @@ body {
 	margin: 0;
 }
 h1 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 30px;
 	text-align: center;
 	color: #fff;
 	font-weight: normal;
 	font-family: Georgia;
-	margin-top: 0px;
+	margin-top: 5px;
+	margin-bottom:10px;
 }
 h2 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	text-align: center;
 }
+h3 {
+	font-size: 20px;
+	text-align: center;
+	color: #0077ee;
+	font-weight: normal;
+	font-family: Georgia;
+	margin-top: 0px;
+	font-style: italic;
+	margin-bottom:40px;
+}
+
 a:link {
 	text-decoration: none;
 	color: #0077ee;
@@ -34,7 +45,6 @@ a:active {
 #chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
 	display: table;
 	margin: auto;
-	z-index: 1;
 }
 #bodyWrapper {
 	display: table;
@@ -48,11 +58,9 @@ a:active {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 	display: block;
 	padding: 10px 0;
-	position: fixed;
+	position: absolute;
 	width: 100%;
-	z-index: 2;
 }
-
 #nav {
 	margin-top: 58px;
 	position: fixed;
@@ -65,11 +73,14 @@ a:active {
 #textWrapper {
 	width: 1200px;
 	margin: auto;
-	margin-top: 120px;
 	display: table;
+	margin-top:250px;
 }
 .space {
-	margin-bottom: 69px;
+	margin-bottom: 65px;
+}
+.topspace{
+	margin-bottom:40px;
 }
 .para {
 	font-family: Arial, Helvetica, sans-serif;

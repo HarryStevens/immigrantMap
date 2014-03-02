@@ -45,7 +45,6 @@ a:active {
 #nav {
 	margin-top: 58px;
 	position: fixed;
-	float: left;
 	border-style: solid;
 	border-width: 2px;
 	font-family: Arial, Helvetica, sans-serif;

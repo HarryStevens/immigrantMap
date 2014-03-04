@@ -42,6 +42,54 @@ a:active {
 	text-decoration: none;
 	color: #0077ee;
 }
+a.facebook:link {
+	color: #3B5998
+}
+a.facebook:visited {
+	color: #3B5998
+}
+a.facebook:hover {
+	color: orange;
+}
+a.facebook:active {
+	color: #3B5998
+}
+a.twitter:link {
+	color: #4099FF
+}
+a.twitter:visited {
+	color: #4099FF
+}
+a.twitter:hover {
+	color: orange;
+}
+a.twitter:active {
+	color: #4099FF
+}
+a.google:link {
+	color: #D34836
+}
+a.google:visited {
+	color: #D34836
+}
+a.google:hover {
+	color: orange;
+}
+a.google:active {
+	color: #D34836
+}
+a.linkedin:link {
+	color: #4875B4
+}
+a.linkedin:visited {
+	color: #4875B4
+}
+a.linkedin:hover {
+	color: orange;
+}
+a.linkedin:active {
+	color: #4875B4
+}
 #chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
 	display: table;
 	margin: auto;
@@ -69,7 +117,7 @@ a:active {
 	padding: 10px;
 	background-color: #fff;
 	margin-top: 2px;
-	width:90px;
+	width: 90px;
 }
 #sharenav {
 	position: fixed;
@@ -88,15 +136,15 @@ a:active {
 	margin-top: 195px;
 }
 /*#fb {
-	margin-top:5px;
-	margin-bottom:0px;
-	margin-left:3px;
-}
-#sharebuttons {
-	display: table;
-	margin-top:5px;
-	margin-left:17px;
-}*/
+ margin-top:5px;
+ margin-bottom:0px;
+ margin-left:3px;
+ }
+ #sharebuttons {
+ display: table;
+ margin-top:5px;
+ margin-left:17px;
+ }*/
 .space {
 	margin-bottom: 75px;
 }

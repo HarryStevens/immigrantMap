@@ -93,6 +93,7 @@ a.linkedin:active {
 #chart_div, #afr_div, #asia_div, #eur_div, #am_div, #oc_div {
 	display: table;
 	margin: auto;
+	border-radius: 20px;
 }
 #bodyWrapper {
 	display: table;
@@ -118,6 +119,7 @@ a.linkedin:active {
 	background-color: #fff;
 	margin-top: 2px;
 	width: 90px;
+	border-radius:12px;
 }
 #sharenav {
 	position: fixed;
@@ -128,6 +130,7 @@ a.linkedin:active {
 	background-color: #fff;
 	margin-top: 210px;
 	width: 90px;
+	border-radius:12px;
 }
 #textWrapper {
 	width: 1200px;

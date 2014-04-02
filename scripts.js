@@ -2,8 +2,6 @@
  * @author Harry Stevens
  */
 
-$(document).ready(dataLoaded);
-
 function dataLoaded() {
 	google.load('visualization', '1', {
 		'packages' : ['geochart'],
@@ -138,3 +136,30 @@ function immData(imm2012) {
 	var ocChart = new google.visualization.GeoChart(document.getElementById('oc_div'));
 	ocChart.draw(data, ocOptions);
 }
+
+//The setNav function will enable the location nav buttons to display their respective html within the map wrapper
+function setNav() {
+	$(".world").on("click", function() {
+		$("#mapWrapper").html("<h2>World</h2><div id='chart_div'></div>");
+	});
+	$(".africa").on("click", function() {
+		$("#mapWrapper").html("<h2>Africa</h2><div id='afr_div'></div>");
+	});
+	$(".americas").on("click", function() {
+		$("#mapWrapper").html("<h2>Americas</h2><div id='am_div'></div>");
+	});
+	$(".asia").on("click", function() {
+		$("#mapWrapper").html("<h2>Asia</h2><div id='asia_div'></div>");
+	});
+	$(".europe").on("click", function() {
+		$("#mapWrapper").html("<h2>Europe</h2><div id='eur_div'></div>");
+	});
+	$(".oceania").on("click", function() {
+		$("#mapWrapper").html("<h2>Oceania</h2><div id='oc_div'></div>");
+	});	
+}
+
+$(document).ready(function(){
+	dataLoaded();
+	setNav();
+});

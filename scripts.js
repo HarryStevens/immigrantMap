@@ -197,6 +197,7 @@ function immData(imm2012) {
 		var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		ocChart.draw(data, ocOptions);
 	});
+	
 }
 
 

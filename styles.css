@@ -122,6 +122,7 @@ a.linkedin:active {
 	margin-top: 2px;
 	width: 90px;
 	border-radius:12px;
+	margin-top: 0px;
 }
 #sharenav {
 	position: fixed;
@@ -141,7 +142,6 @@ a.linkedin:active {
 	margin-top: 195px;
 }
 #mapWrapper {
-	border: 1px solid #000;
 	margin-left: 150px;
 	margin-right: 150px;
 	
@@ -213,6 +213,24 @@ a.linkedin:active {
 	margin-top: 4px;
 }
 .button {
+	margin-top: 0px;
+	margin-bottom: -15px;
 	cursor: pointer;
 	color: #0077ee;
+}
+.oceania{
+	margin-bottom: 0px;
+}
+.world.active{
+	padding-right:34px;
+}
+.active {
+	padding-left:10px;
+	margin-left:-10px;
+	background-color: #0077ee;
+	color: #fff;
+	cursor: default;
+}
+.active:hover {
+	color: #fff;
 }

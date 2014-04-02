@@ -48,6 +48,7 @@ function immData(imm2012) {
 	
 	$(".world").on("click", function() {
 		$("#mapHead").html("<h2>World</h2>");
+		$(".world").addClass("active");
 		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		chart.draw(data, options);
 	});
@@ -70,6 +71,8 @@ function immData(imm2012) {
 	
 	$(".africa").on("click", function() {
 		$("#mapHead").html("<h2>Africa</h2>");
+		$(".world").removeClass("avtive");
+		$(".africa").addClass("active");
 		var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		afrChart.draw(data, afrOptions);
 	});

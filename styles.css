@@ -146,7 +146,9 @@ a.linkedin:active {
 	margin-left: 150px;
 	margin-right: 150px;
 }
-
+#am_div {
+	display: none;
+}
 
 /*
 #world-html {

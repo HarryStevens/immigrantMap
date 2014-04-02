@@ -140,7 +140,8 @@ function immData(imm2012) {
 //The setNav function will enable the location nav buttons to display their respective html within the map wrapper
 function setNav() {
 	$(".world").on("click", function() {
-		$("#mapWrapper").html("<h2>World</h2><div id='chart_div'></div>");
+		$("#mapWrapper").html("<h2>World</h2>");
+		$("#chartWrapper").html("<div id='chart_div'></div>");
 	});
 	$(".africa").on("click", function() {
 		$("#mapWrapper").html("<h2>Africa</h2><div id='afr_div'></div>");

@@ -43,8 +43,37 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	};
-	var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 	chart.draw(data, options);
+	
+	$(".world").on("click", function() {
+		$("#mapHead").html("<h2>World</h2>");
+		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		chart.draw(data, options);
+	});
+
+	//Africa
+	var afrOptions = {
+		colorAxis : {
+			maxValue : 15000,
+			colors : ['#fff', '#330000']
+		},
+		width : 900,
+		keepAspectRatio : true,
+		forceIFrame : true,
+		region : '002',
+		backgroundColor : {
+			stroke : '#000',
+			strokeWidth : 4
+		}
+	}
+	
+	$(".africa").on("click", function() {
+		$("#mapHead").html("<h2>Africa</h2>");
+		var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		afrChart.draw(data, afrOptions);
+	});
+	
 	
 	//Americas
 	var amOptions = {
@@ -61,27 +90,13 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	var amChart = new google.visualization.GeoChart(document.getElementById('am_div'));
-	amChart.draw(data, amOptions);
 	
-	//Africa
-	var afrOptions = {
-		colorAxis : {
-			maxValue : 15000,
-			colors : ['#fff', '#330000']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '002',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	}
-	var afrChart = new google.visualization.GeoChart(document.getElementById('afr_div'));
-	afrChart.draw(data, afrOptions);
-	
+	$(".americas").on("click", function() {
+		$("#mapHead").html("<h2>Americas</h2>");
+		var amChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		amChart.draw(data, amOptions);
+	});
+
 	//Asia
 	var asiaOptions = {
 		colorAxis : {
@@ -97,8 +112,11 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	var asiaChart = new google.visualization.GeoChart(document.getElementById('asia_div'));
-	asiaChart.draw(data, asiaOptions);
+	$(".asia").on("click", function() {
+		$("#mapHead").html("<h2>Asia</h2>");
+		var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		asiaChart.draw(data, asiaOptions);
+	});
 	
 	//Europe
 	var eurOptions = {
@@ -115,8 +133,12 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	var eurChart = new google.visualization.GeoChart(document.getElementById('eur_div'));
-	eurChart.draw(data, eurOptions);
+	
+	$(".europe").on("click", function() {
+		$("#mapHead").html("<h2>Europe</h2>");
+		var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		eurChart.draw(data, eurOptions);
+	});
 	
 	//Oceania
 	var ocOptions = {
@@ -133,34 +155,15 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	var ocChart = new google.visualization.GeoChart(document.getElementById('oc_div'));
-	ocChart.draw(data, ocOptions);
+
+	$(".oceania").on("click", function() {
+		$("#mapHead").html("<h2>Oceania</h2>");
+		var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		ocChart.draw(data, ocOptions);
+	});
 }
 
-//The setNav function will enable the location nav buttons to display their respective html within the map wrapper
-function setNav() {
-	$(".world").on("click", function() {
-		$("#mapWrapper").html("<h2>World</h2>");
-		$("#chartWrapper").html("<div id='chart_div'></div>");
-	});
-	$(".africa").on("click", function() {
-		$("#mapWrapper").html("<h2>Africa</h2><div id='afr_div'></div>");
-	});
-	$(".americas").on("click", function() {
-		$("#mapWrapper").html("<h2>Americas</h2><div id='am_div'></div>");
-	});
-	$(".asia").on("click", function() {
-		$("#mapWrapper").html("<h2>Asia</h2><div id='asia_div'></div>");
-	});
-	$(".europe").on("click", function() {
-		$("#mapWrapper").html("<h2>Europe</h2><div id='eur_div'></div>");
-	});
-	$(".oceania").on("click", function() {
-		$("#mapWrapper").html("<h2>Oceania</h2><div id='oc_div'></div>");
-	});	
-}
 
 $(document).ready(function(){
 	dataLoaded();
-	setNav();
 });

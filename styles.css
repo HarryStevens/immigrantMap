@@ -141,10 +141,10 @@ a.linkedin:active {
 	margin-top: 195px;
 }
 #mapWrapper {
-	height: 600px;
-	outline: 1px solid #000;
+	border: 1px solid #000;
 	margin-left: 150px;
 	margin-right: 150px;
+	
 }
 #am_div {
 	display: none;

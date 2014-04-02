@@ -49,6 +49,11 @@ function immData(imm2012) {
 	$(".world").on("click", function() {
 		$("#mapHead").html("<h2>World</h2>");
 		$(".world").addClass("active");
+		$(".africa").removeClass("active");
+		$(".americas").removeClass("active");
+		$(".asia").removeClass("active");
+		$(".europe").removeClass("active");
+		$(".oceania").removeClass("active");
 		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		chart.draw(data, options);
 	});
@@ -71,8 +76,12 @@ function immData(imm2012) {
 	
 	$(".africa").on("click", function() {
 		$("#mapHead").html("<h2>Africa</h2>");
-		$(".world").removeClass("avtive");
+		$(".world").removeClass("active");
 		$(".africa").addClass("active");
+		$(".americas").removeClass("active");
+		$(".asia").removeClass("active");
+		$(".europe").removeClass("active");
+		$(".oceania").removeClass("active");
 		var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		afrChart.draw(data, afrOptions);
 	});
@@ -96,6 +105,12 @@ function immData(imm2012) {
 	
 	$(".americas").on("click", function() {
 		$("#mapHead").html("<h2>Americas</h2>");
+		$(".world").removeClass("active");
+		$(".africa").removeClass("active");
+		$(".americas").addClass("active");
+		$(".asia").removeClass("active");
+		$(".europe").removeClass("active");
+		$(".oceania").removeClass("active");
 		var amChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		amChart.draw(data, amOptions);
 	});
@@ -117,6 +132,12 @@ function immData(imm2012) {
 	}
 	$(".asia").on("click", function() {
 		$("#mapHead").html("<h2>Asia</h2>");
+		$(".world").removeClass("active");
+		$(".africa").removeClass("active");
+		$(".americas").removeClass("active");
+		$(".asia").addClass("active");
+		$(".europe").removeClass("active");
+		$(".oceania").removeClass("active");
 		var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		asiaChart.draw(data, asiaOptions);
 	});
@@ -139,6 +160,12 @@ function immData(imm2012) {
 	
 	$(".europe").on("click", function() {
 		$("#mapHead").html("<h2>Europe</h2>");
+		$(".world").removeClass("active");
+		$(".africa").removeClass("active");
+		$(".americas").removeClass("active");
+		$(".asia").removeClass("active");
+		$(".europe").addClass("active");
+		$(".oceania").removeClass("active");
 		var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		eurChart.draw(data, eurOptions);
 	});
@@ -161,6 +188,12 @@ function immData(imm2012) {
 
 	$(".oceania").on("click", function() {
 		$("#mapHead").html("<h2>Oceania</h2>");
+		$(".world").removeClass("active");
+		$(".africa").removeClass("active");
+		$(".americas").removeClass("active");
+		$(".asia").removeClass("active");
+		$(".europe").removeClass("active");
+		$(".oceania").addClass("active");
 		var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		ocChart.draw(data, ocOptions);
 	});

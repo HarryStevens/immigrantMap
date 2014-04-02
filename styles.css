@@ -26,8 +26,8 @@ h3 {
 	margin-bottom: 20px;
 }
 div {
-    margin-bottom: 0px;
-  }
+	margin-bottom: 0px;
+}
 a:link {
 	text-decoration: none;
 	color: #0077ee;
@@ -121,7 +121,7 @@ a.linkedin:active {
 	background-color: #fff;
 	margin-top: 2px;
 	width: 90px;
-	border-radius:12px;
+	border-radius: 12px;
 	margin-top: 0px;
 }
 #sharenav {
@@ -133,7 +133,7 @@ a.linkedin:active {
 	background-color: #fff;
 	margin-top: 170px;
 	width: 90px;
-	border-radius:12px;
+	border-radius: 12px;
 }
 #textWrapper {
 	width: 1200px;
@@ -144,23 +144,22 @@ a.linkedin:active {
 #mapWrapper {
 	margin-left: 150px;
 	margin-right: 150px;
-	
 }
 #am_div {
 	display: none;
 }
 
 /*
-#world-html {
-	display:none;
-}
-#africa-html {
-	display: none;
-}
-#displayed {
-	display: block;
-}
-*/
+ #world-html {
+ display:none;
+ }
+ #africa-html {
+ display: none;
+ }
+ #displayed {
+ display: block;
+ }
+ */
 
 /*#fb {
  margin-top:5px;
@@ -218,15 +217,18 @@ a.linkedin:active {
 	cursor: pointer;
 	color: #0077ee;
 }
-.oceania{
+.button:hover {
+	color: #CD2626;
+}
+.oceania {
 	margin-bottom: 0px;
 }
-.world.active{
-	padding-right:34px;
+.world.active {
+	padding-right: 34px;
 }
 .active {
-	padding-left:10px;
-	margin-left:-10px;
+	padding-left: 10px;
+	margin-left: -10px;
 	background-color: #0077ee;
 	color: #fff;
 	cursor: default;

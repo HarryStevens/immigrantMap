@@ -2,7 +2,6 @@
  * @author Harry Stevens
  */
 
-
 //Loads the Google Visualization library to make a geochart and calls the function googleLoaded
 function dataLoaded() {
 	google.load('visualization', '1', {
@@ -16,11 +15,10 @@ function googleLoaded() {
 	$.get('immigration2012.json', immData, 'json');
 }
 
-
 //This is the main function. It:
-// A. Formats the json data; 
+// A. Formats the json data;
 // B. Runs it through the Google Visualization library
-// C. Displays certain elements of that data on certain click events (see below) 
+// C. Displays certain elements of that data on certain click events (see below)
 function immData(imm2012) {
 	var dataObj = imm2012.immData;
 	var dataArray = [];
@@ -36,9 +34,9 @@ function immData(imm2012) {
 		pattern : '###,###'
 	});
 	formatter.format(data, 1);
-	
+
 	//Each section of code displays a different map and is activated when the corresponding button div is clicked
-	
+
 	//World
 	var options = {
 		colorAxis : {
@@ -55,7 +53,7 @@ function immData(imm2012) {
 	};
 	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 	chart.draw(data, options);
-	
+
 	$(".world").on("click", function() {
 		$("#mapHead").html("<h2>World</h2>");
 		$(".world").addClass("active");
@@ -83,7 +81,7 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	
+
 	$(".africa").on("click", function() {
 		$("#mapHead").html("<h2>Africa</h2>");
 		$(".world").removeClass("active");
@@ -95,8 +93,7 @@ function immData(imm2012) {
 		var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		afrChart.draw(data, afrOptions);
 	});
-	
-	
+
 	//Americas
 	var amOptions = {
 		colorAxis : {
@@ -112,7 +109,7 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	
+
 	$(".americas").on("click", function() {
 		$("#mapHead").html("<h2>Americas</h2>");
 		$(".world").removeClass("active");
@@ -151,7 +148,7 @@ function immData(imm2012) {
 		var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		asiaChart.draw(data, asiaOptions);
 	});
-	
+
 	//Europe
 	var eurOptions = {
 		colorAxis : {
@@ -167,7 +164,7 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
-	
+
 	$(".europe").on("click", function() {
 		$("#mapHead").html("<h2>Europe</h2>");
 		$(".world").removeClass("active");
@@ -179,7 +176,7 @@ function immData(imm2012) {
 		var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		eurChart.draw(data, eurOptions);
 	});
-	
+
 	//Oceania
 	var ocOptions = {
 		colorAxis : {
@@ -207,10 +204,10 @@ function immData(imm2012) {
 		var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		ocChart.draw(data, ocOptions);
 	});
-	
+
 }
 
 //When everything is loaded, this little bit of jQuery sets the javascript in motion by calling dataLoaded (see top of this file)
-$(document).ready(function(){
+$(document).ready(function() {
 	dataLoaded();
-});
+}); 

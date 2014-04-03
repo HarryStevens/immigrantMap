@@ -18,13 +18,13 @@ h2 {
 h3 {
 	font-size: 20px;
 	text-align: center;
-	color: #0077ee;
 	font-weight: normal;
 	font-family: Georgia;
 	margin-top: 0px;
 	font-style: italic;
 	margin-bottom: 20px;
 }
+
 div {
 	margin-bottom: 0px;
 }
@@ -43,6 +43,12 @@ a:hover {
 a:active {
 	text-decoration: none;
 	color: #0077ee;
+}
+a.byline {
+	color: #6BB5FF;
+}
+a.byline:hover {
+	color: #FF6B6B;
 }
 a.facebook:link {
 	color: #3B5998

@@ -2,6 +2,8 @@
  * @author Harry Stevens
  */
 
+
+//Loads the Google Visualization library to make a geochart and calls the function googleLoaded
 function dataLoaded() {
 	google.load('visualization', '1', {
 		'packages' : ['geochart'],
@@ -9,10 +11,16 @@ function dataLoaded() {
 	});
 }
 
+//Loads the immigration data from the json file
 function googleLoaded() {
 	$.get('immigration2012.json', immData, 'json');
 }
 
+
+//This is the main function. It:
+// A. Formats the json data; 
+// B. Runs it through the Google Visualization library
+// C. Displays certain elements of that data on certain click events (see below) 
 function immData(imm2012) {
 	var dataObj = imm2012.immData;
 	var dataArray = [];
@@ -28,6 +36,8 @@ function immData(imm2012) {
 		pattern : '###,###'
 	});
 	formatter.format(data, 1);
+	
+	//Each section of code displays a different map and is activated when the corresponding button div is clicked
 	
 	//World
 	var options = {
@@ -200,7 +210,7 @@ function immData(imm2012) {
 	
 }
 
-
+//When everything is loaded, this little bit of jQuery sets the javascript in motion by calling dataLoaded (see top of this file)
 $(document).ready(function(){
 	dataLoaded();
 });

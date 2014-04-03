@@ -2,7 +2,14 @@
  * @author Harry Stevens
  */
 
-//Loads the Google Visualization library to make a geochart and calls the function googleLoaded
+//This javascript file uses Google's geochart visualizaiton library and jQuery to draw maps with data from a json file 
+//and display certain maps based on certain click events from the user. It will accomplish this with the following functions:
+//1. dataLoaded: Loads the Google Visualization library to make a geochart and calls the function "googleLoaded"
+//2. googleLoaded: Loads the data from the json file and calls the function "immData," which is the largest function in the code
+//3. immData: Formats the json data; runs it through the Google Visualization library; displays certain elements of that data on certain click events
+
+
+//dataLoaded: Loads the Google Visualization library to make a geochart and calls the function googleLoaded
 function dataLoaded() {
 	google.load('visualization', '1', {
 		'packages' : ['geochart'],
@@ -10,12 +17,12 @@ function dataLoaded() {
 	});
 }
 
-//Loads the immigration data from the json file
+//googleLoaded: Loads the immigration data from the json file and calls the function immData
 function googleLoaded() {
 	$.get('immigration2012.json', immData, 'json');
 }
 
-//This is the main function. It:
+//immData: This is the main function. It:
 // A. Formats the json data;
 // B. Runs it through the Google Visualization library
 // C. Displays certain elements of that data on certain click events (see below)
@@ -35,7 +42,9 @@ function immData(imm2012) {
 	});
 	formatter.format(data, 1);
 
-	//Each section of code displays a different map and is activated when the corresponding button div is clicked
+	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery). 
+	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing. 
+	//That CSS class will be removed when a different button is clicked and becomes active. This is done somewhat verbosely (see below); there is likely a better way to do it.
 
 	//World
 	var options = {

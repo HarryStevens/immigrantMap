@@ -2,6 +2,9 @@
  * @author Harry Stevens
  */
 
+//Global vars to update share buttons based on custom URL
+
+
 //This javascript file uses Google's geochart visualizaiton library and jQuery to draw maps with data from a json file
 //and display certain maps based on certain click events from the user. It will accomplish this with the following functions:
 //1. dataLoaded: Loads the Google Visualization library to make a geochart and calls the function "googleLoaded"
@@ -162,7 +165,7 @@ function immData(imm2012) {
 			}
 		}
 		//End Options
-		
+
 		//When a given button is clicked, its options will be displayed in the mapWrapper.
 		//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
 		//That CSS class will be removed when a different button is clicked and becomes active.
@@ -171,14 +174,37 @@ function immData(imm2012) {
 			$("#mapHead").html("<h2>" + contName + "</h2>");
 			$("#nav .button").removeClass("active");
 			$(this).addClass("active");
+			//History.js for custom URLs
+			History.pushState({
+				state : 1
+			}, "Who Wants to be an American?", "?view=" + contName);
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 			chart.draw(data, options);
-		}
+
+		}//end active if
+
 	});
 	//end click handler
 
-	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-	chart.draw(data, options);
+	//History.js to handle default states and reloads
+	var urlData = History.getState().cleanUrl;
+	var queryString = urlData.split("?")[1];
+	if (!queryString) {
+		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+		chart.draw(data, options);
+		$("#sharebuttons").html(
+			<a class="facebook" href="JavaScript:window.open('http://www.facebook.com/sharer.php?u=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">FACEBOOK</a>'
+			<a class="twitter" href="JavaScript:window.open('https://twitter.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html&text=This data visualization shows which nationalities received the most green cards in 2012&hashtags=immigration,dataviz&related=Harry_Stevens','','width=450,height=350')">TWITTER</a>
+			<a class="google" href="JavaScript:window.open('https://plus.google.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">GOOGLE +</a>
+			<a class="linkedin" href="JavaScript:window.open('https://linkedin.com/cws/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">LINKEDIN</a>
+
+		
+		
+		
+	} else {
+		var viewName = queryString.split("=")[1];
+		$("." + viewName).click();
+	}
 }//end immdata
 
 //When everything is loaded, this little bit of jQuery sets the javascript in motion by calling dataLoaded (see top of this file)

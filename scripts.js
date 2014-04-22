@@ -45,7 +45,7 @@ function immData(imm2012) {
 	var options = {
 		colorAxis : {
 			maxValue : 25000,
-			colors : ['#fff', '#4C4646']
+			colors : ['#edecec', '#4C4646']
 		},
 		width : 900,
 		keepAspectRatio : true,
@@ -65,7 +65,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 25000,
-					colors : ['#fff', '#4C4646']
+					colors : ['#edecec', '#4C4646']
 				},
 				width : 900,
 				keepAspectRatio : true,
@@ -81,7 +81,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 15000,
-					colors : ['#fff', '#330000']
+					colors : ['#eae5e5', '#330000']
 				},
 				width : 900,
 				keepAspectRatio : true,
@@ -98,7 +98,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 25000,
-					colors : ['#fff', '#151B54']
+					colors : ['#d0d1dc', '#151B54']
 				},
 				width : 900,
 				keepAspectRatio : true,
@@ -115,7 +115,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 80000,
-					colors : ['#fff', '#7F5217']
+					colors : ['#e5dcd0', '#7F5217']
 				},
 				width : 900,
 				keepAspectRatio : true,
@@ -132,7 +132,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 12000,
-					colors : ['#fff', '#571B7E']
+					colors : ['#ddd1e5', '#451564']
 				},
 				width : 900,
 				keepAspectRatio : true,
@@ -149,7 +149,7 @@ function immData(imm2012) {
 			options = {
 				colorAxis : {
 					maxValue : 2500,
-					colors : ['#fff', '#254117']
+					colors : ['#bdc6b9', '#254117']
 				},
 				width : 900,
 				keepAspectRatio : true,

@@ -40,7 +40,7 @@ function immData(imm2012) {
 		pattern : '###,###'
 	});
 	formatter.format(data, 1);
-	
+
 	//Default options
 	var options = {
 		colorAxis : {
@@ -56,12 +56,11 @@ function immData(imm2012) {
 		}
 	};
 
-//WORK IN PROGRESS... TRYING TO DO CONVENTION OVER CONFIGURATION WITH OPTIONS...
 	//Options on click
 	$(".button").on("click", function() {
-		var options = {};
 		var parClass = $(this).attr("class");
 		var contName = parClass.split(" ")[1];
+		//World Options
 		if (contName == "world") {
 			options = {
 				colorAxis : {
@@ -76,7 +75,8 @@ function immData(imm2012) {
 					strokeWidth : 4
 				}
 			}
-		}//end world options if
+		}
+		//Africa Options
 		if (contName == "africa") {
 			options = {
 				colorAxis : {
@@ -92,85 +92,90 @@ function immData(imm2012) {
 					strokeWidth : 4
 				}
 			}
-		}//end africa options if
+		}
+		//Americas Options
 		if (contName == "americas") {
 			options = {
-					colorAxis : {
-						maxValue : 25000,
-						colors : ['#fff', '#151B54']
-					},
-					width : 900,
-					keepAspectRatio : true,
-					forceIFrame : true,
-					region : '019',
-					backgroundColor : {
-						stroke : '#000',
-						strokeWidth : 4
-					}
+				colorAxis : {
+					maxValue : 25000,
+					colors : ['#fff', '#151B54']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				region : '019',
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
 				}
-		}//end americas options if
+			}
+		}
+		//Asia Options
 		if (contName == "asia") {
 			options = {
-					colorAxis : {
-						maxValue : 80000,
-						colors : ['#fff', '#7F5217']
-					},
-					width : 900,
-					keepAspectRatio : true,
-					forceIFrame : true,
-					region : '142',
-					backgroundColor : {
-						stroke : '#000',
-						strokeWidth : 4
-					}
+				colorAxis : {
+					maxValue : 80000,
+					colors : ['#fff', '#7F5217']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				region : '142',
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
 				}
-		}//end asia options if
+			}
+		}
+		//Europe Options
 		if (contName == "europe") {
 			options = {
-					colorAxis : {
-						maxValue : 12000,
-						colors : ['#fff', '#571B7E']
-					},
-					width : 900,
-					keepAspectRatio : true,
-					forceIFrame : true,
-					region : '150',
-					backgroundColor : {
-						stroke : '#000',
-						strokeWidth : 4
-					}
+				colorAxis : {
+					maxValue : 12000,
+					colors : ['#fff', '#571B7E']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				region : '150',
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
 				}
-		}//end europe options if
+			}
+		}
+		//Oceania Options
 		if (contName == "oceania") {
 			options = {
-					colorAxis : {
-						maxValue : 2500,
-						colors : ['#fff', '#254117']
-					},
-					width : 900,
-					keepAspectRatio : true,
-					forceIFrame : true,
-					region : '009',
-					backgroundColor : {
-						stroke : '#000',
-						strokeWidth : 4
-					}
+				colorAxis : {
+					maxValue : 2500,
+					colors : ['#fff', '#254117']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				region : '009',
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
 				}
-		}//end oceania options if		
-	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery).
-	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
-	//That CSS class will be removed when a different button is clicked and becomes active.
+			}
+		}
+		//End Options
+		
+		//When a given button is clicked, its options will be displayed in the mapWrapper.
+		//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
+		//That CSS class will be removed when a different button is clicked and becomes active.
 		if ($(this).hasClass("active")) {
 		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
 			$("#mapHead").html("<h2>" + contName + "</h2>");
 			$("#nav .button").removeClass("active");
 			$(this).addClass("active");
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 			chart.draw(data, options);
 		}
-	});//end click handler
+	});
+	//end click handler
 
 	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 	chart.draw(data, options);

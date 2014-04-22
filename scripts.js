@@ -223,7 +223,6 @@ function immData(imm2012) {
 			chart.draw(data, options);
 		} else {
 			$("." + viewName).click();
-			$("#sharebuttons").html(fbStart + fbURLStart + "?" + queryString + fbURLEnd + fbEnd + "<br />" + twStart + twURLStart + "?" + queryString + twURLEnd + twEnd + "<br />" + goStart + goURLStart + "?" + queryString + goURLEnd + goEnd + "<br />" + liStart + liURLStart + "?" + queryString + liURLEnd + liEnd);		
 		}
 	}
 }//end immdata

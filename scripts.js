@@ -6,7 +6,7 @@
 //and display certain maps based on certain click events from the user. It will accomplish this with the following functions:
 //1. dataLoaded: Loads the Google Visualization library to make a geochart and calls the function "googleLoaded"
 //2. googleLoaded: Loads the data from the json file and calls the function "immData," which is the largest function in the code
-//3. immData: Formats the json data; runs it through the Google Visualization library; displays certain elements of that data on certain click events
+//3. mkCharts: Formats the json data; runs it through the Google Visualization library; displays certain elements of that data on certain click events
 
 //dataLoaded: Loads the Google Visualization library to make a geochart and calls the function googleLoaded
 function dataLoaded() {
@@ -18,14 +18,14 @@ function dataLoaded() {
 
 //googleLoaded: Loads the immigration data from the json file and calls the function immData
 function googleLoaded() {
-	$.get('immigration2012.json', immData, 'json');
+	$.get('immigration2012.json', mkCharts, 'json');
 }
 
-//immData: This is the main function. It:
+//mkCharts: This is the main function. It:
 // A. Formats the json data;
 // B. Runs it through the Google Visualization library
 // C. Displays certain elements of that data on certain click events (see below)
-function immData(imm2012) {
+function mkCharts(imm2012) {
 	var dataObj = imm2012.immData;
 	var dataArray = [];
 	var dataHeaders = ["Country", "Green cards"];

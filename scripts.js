@@ -216,7 +216,8 @@ function immData(imm2012) {
 		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		chart.draw(data, options);
 	} else {
-		var viewName = queryString.split("=")[1];		
+		var viewName = queryString.split("=")[1];
+		//Need separate case for world because when page loads it defaults to world view, so world button can't be clicked		
 		if (viewName == 'world'){
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 			chart.draw(data, options);

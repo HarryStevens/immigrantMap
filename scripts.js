@@ -2,9 +2,6 @@
  * @author Harry Stevens
  */
 
-//Global vars to update share buttons based on custom URL
-
-
 //This javascript file uses Google's geochart visualizaiton library and jQuery to draw maps with data from a json file
 //and display certain maps based on certain click events from the user. It will accomplish this with the following functions:
 //1. dataLoaded: Loads the Google Visualization library to make a geochart and calls the function "googleLoaded"
@@ -180,6 +177,34 @@ function immData(imm2012) {
 			}, "Who Wants to be an American?", "?view=" + contName);
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 			chart.draw(data, options);
+			
+			//Need these vars to update share buttons based on custom URL
+			var urlData = History.getState().cleanUrl;
+			var queryString = urlData.split("?")[1];
+			
+			var fbStart = '<a class="facebook" href="JavaScript:window.open(';
+			var fbURLStart = "'http://www.facebook.com/sharer.php?u=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+			var fbURLEnd = "','','width=657,height=400,scrollbars=1')";
+			var fbEnd = '">FACEBOOK</a>';
+	
+			var twStart = '<a class="twitter" href="JavaScript:window.open(';
+			var twURLStart = "'https://twitter.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+			var twURLEnd = "&text=This data visualization shows which nationalities received the most green cards in 2012&hashtags=immigration,dataviz&related=Harry_Stevens','','width=450,height=350')";
+			var twEnd = '">TWITTER</a>';
+	
+			var goStart = '<a class="google" href="JavaScript:window.open(';
+			var goURLStart = "'https://plus.google.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+			var goURLEnd = "','','width=657,height=400,scrollbars=1')";
+			var goEnd = '">GOOGLE +</a>';
+	
+			var liStart = '<a class="linkedin" href="JavaScript:window.open(';
+			var liURLStart = "'https://linkedin.com/cws/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+			var liURLEnd = "','','width=657,height=400,scrollbars=1')";
+			var liEnd = '">LINKEDIN</a>';
+			
+			$("#sharebuttons").html(
+				fbStart+fbURLStart+"?"+queryString+fbURLEnd+fbEnd+"<br />"+twStart+twURLStart+"?"+queryString+twURLEnd+twEnd+"<br />"+goStart+goURLStart+"?"+queryString+goURLEnd+goEnd+"<br />"+liStart+liURLStart+"?"+queryString+liURLEnd+liEnd
+			);
 
 		}//end active if
 
@@ -192,18 +217,37 @@ function immData(imm2012) {
 	if (!queryString) {
 		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 		chart.draw(data, options);
-		$("#sharebuttons").html(
-			<a class="facebook" href="JavaScript:window.open('http://www.facebook.com/sharer.php?u=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">FACEBOOK</a>'
-			<a class="twitter" href="JavaScript:window.open('https://twitter.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html&text=This data visualization shows which nationalities received the most green cards in 2012&hashtags=immigration,dataviz&related=Harry_Stevens','','width=450,height=350')">TWITTER</a>
-			<a class="google" href="JavaScript:window.open('https://plus.google.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">GOOGLE +</a>
-			<a class="linkedin" href="JavaScript:window.open('https://linkedin.com/cws/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html','','width=657,height=400,scrollbars=1')">LINKEDIN</a>
-
-		
-		
-		
+		//		$("#sharebuttons").html();
 	} else {
+
+		//Vars to update share buttons based on custom URL
+		var fbStart = '<a class="facebook" href="JavaScript:window.open(';
+		var fbURLStart = "'http://www.facebook.com/sharer.php?u=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+		var fbURLEnd = "','','width=657,height=400,scrollbars=1')";
+		var fbEnd = '">FACEBOOK</a>';
+
+		var twStart = '<a class="twitter" href="JavaScript:window.open(';
+		var twURLStart = "'https://twitter.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+		var twURLEnd = "&text=This data visualization shows which nationalities received the most green cards in 2012&hashtags=immigration,dataviz&related=Harry_Stevens','','width=450,height=350')";
+		var twEnd = '">TWITTER</a>';
+
+		var goStart = '<a class="google" href="JavaScript:window.open(';
+		var goURLStart = "'https://plus.google.com/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+		var goURLEnd = "','','width=657,height=400,scrollbars=1')";
+		var goEnd = '">GOOGLE +</a>';
+
+		var liStart = '<a class="linkedin" href="JavaScript:window.open(';
+		var liURLStart = "'https://linkedin.com/cws/share?url=http://www.columbia.edu/~hjs2136/immigrant-map/index.html";
+		var liURLEnd = "','','width=657,height=400,scrollbars=1')";
+		var liEnd = '">LINKEDIN</a>';
+		
 		var viewName = queryString.split("=")[1];
 		$("." + viewName).click();
+		
+		$("#sharebuttons").html(
+			fbStart+fbURLStart+"?"+queryString+fbURLEnd+fbEnd+"<br />"+twStart+twURLStart+"?"+queryString+twURLEnd+twEnd+"<br />"+goStart+goURLStart+"?"+queryString+goURLEnd+goEnd+"<br />"+liStart+liURLStart+"?"+queryString+liURLEnd+liEnd
+		);
+		
 	}
 }//end immdata
 

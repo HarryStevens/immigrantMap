@@ -2,12 +2,11 @@
  * @author Harry Stevens
  */
 
-//This javascript file uses Google's geochart visualizaiton library and jQuery to draw maps with data from a json file 
+//This javascript file uses Google's geochart visualizaiton library and jQuery to draw maps with data from a json file
 //and display certain maps based on certain click events from the user. It will accomplish this with the following functions:
 //1. dataLoaded: Loads the Google Visualization library to make a geochart and calls the function "googleLoaded"
 //2. googleLoaded: Loads the data from the json file and calls the function "immData," which is the largest function in the code
 //3. immData: Formats the json data; runs it through the Google Visualization library; displays certain elements of that data on certain click events
-
 
 //dataLoaded: Loads the Google Visualization library to make a geochart and calls the function googleLoaded
 function dataLoaded() {
@@ -42,12 +41,52 @@ function immData(imm2012) {
 	});
 	formatter.format(data, 1);
 
-	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery). 
-	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing. 
-	//That CSS class will be removed when a different button is clicked and becomes active. This is done somewhat verbosely (see below); there is likely a better way to do it.
+	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery).
+	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
+	//That CSS class will be removed when a different button is clicked and becomes active.
+
+/*WORK IN PROGRESS... TRYING TO DO CONVENTION OVER CONFIGURATION WITH OPTIONS...
+	//Options
+	$(".button").on("click", function() {
+		var options = {};
+		var parClass = $(this).attr("class");
+		var contName = parClass.split(" ")[1];
+		if (contName == "world") {
+			options = {
+				colorAxis : {
+					maxValue : 25000,
+					colors : ['#fff', '#4C4646']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
+				}
+			}
+		}//end world options if
+		if (contName == "africa") {
+			options = {
+				colorAxis : {
+					maxValue : 15000,
+					colors : ['#fff', '#330000']
+				},
+				width : 900,
+				keepAspectRatio : true,
+				forceIFrame : true,
+				region : '002',
+				backgroundColor : {
+					stroke : '#000',
+					strokeWidth : 4
+				}
+			}
+		}
+	});
+*/
 
 	//World
-	var options = {
+	var worldOptions = {
 		colorAxis : {
 			maxValue : 25000,
 			colors : ['#fff', '#4C4646']
@@ -60,19 +99,21 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	};
+
 	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-	chart.draw(data, options);
+	chart.draw(data, worldOptions);
 
 	$(".world").on("click", function() {
-		$("#mapHead").html("<h2>World</h2>");
-		$(".world").addClass("active");
-		$(".africa").removeClass("active");
-		$(".americas").removeClass("active");
-		$(".asia").removeClass("active");
-		$(".europe").removeClass("active");
-		$(".oceania").removeClass("active");
-		var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		chart.draw(data, options);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			chart.draw(data, worldOptions);
+		}
 	});
 
 	//Africa
@@ -89,18 +130,19 @@ function immData(imm2012) {
 			stroke : '#000',
 			strokeWidth : 4
 		}
-	}
+	};
 
 	$(".africa").on("click", function() {
-		$("#mapHead").html("<h2>Africa</h2>");
-		$(".world").removeClass("active");
-		$(".africa").addClass("active");
-		$(".americas").removeClass("active");
-		$(".asia").removeClass("active");
-		$(".europe").removeClass("active");
-		$(".oceania").removeClass("active");
-		var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		afrChart.draw(data, afrOptions);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			afrChart.draw(data, afrOptions);
+		}
 	});
 
 	//Americas
@@ -120,15 +162,16 @@ function immData(imm2012) {
 	}
 
 	$(".americas").on("click", function() {
-		$("#mapHead").html("<h2>Americas</h2>");
-		$(".world").removeClass("active");
-		$(".africa").removeClass("active");
-		$(".americas").addClass("active");
-		$(".asia").removeClass("active");
-		$(".europe").removeClass("active");
-		$(".oceania").removeClass("active");
-		var amChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		amChart.draw(data, amOptions);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var amChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			amChart.draw(data, amOptions);
+		}
 	});
 
 	//Asia
@@ -146,16 +189,18 @@ function immData(imm2012) {
 			strokeWidth : 4
 		}
 	}
+
 	$(".asia").on("click", function() {
-		$("#mapHead").html("<h2>Asia</h2>");
-		$(".world").removeClass("active");
-		$(".africa").removeClass("active");
-		$(".americas").removeClass("active");
-		$(".asia").addClass("active");
-		$(".europe").removeClass("active");
-		$(".oceania").removeClass("active");
-		var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		asiaChart.draw(data, asiaOptions);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			asiaChart.draw(data, asiaOptions);
+		}
 	});
 
 	//Europe
@@ -175,15 +220,16 @@ function immData(imm2012) {
 	}
 
 	$(".europe").on("click", function() {
-		$("#mapHead").html("<h2>Europe</h2>");
-		$(".world").removeClass("active");
-		$(".africa").removeClass("active");
-		$(".americas").removeClass("active");
-		$(".asia").removeClass("active");
-		$(".europe").addClass("active");
-		$(".oceania").removeClass("active");
-		var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		eurChart.draw(data, eurOptions);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			eurChart.draw(data, eurOptions);
+		}
 	});
 
 	//Oceania
@@ -203,20 +249,20 @@ function immData(imm2012) {
 	}
 
 	$(".oceania").on("click", function() {
-		$("#mapHead").html("<h2>Oceania</h2>");
-		$(".world").removeClass("active");
-		$(".africa").removeClass("active");
-		$(".americas").removeClass("active");
-		$(".asia").removeClass("active");
-		$(".europe").removeClass("active");
-		$(".oceania").addClass("active");
-		var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-		ocChart.draw(data, ocOptions);
+		if ($(this).hasClass("active")) {
+		} else {
+			var parClass = $(this).attr("class");
+			var contName = parClass.split(" ")[1];
+			$("#mapHead").html("<h2>" + contName + "</h2>");
+			$("#nav .button").removeClass("active");
+			$(this).addClass("active");
+			var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+			ocChart.draw(data, ocOptions);
+		}
 	});
-
 }
 
 //When everything is loaded, this little bit of jQuery sets the javascript in motion by calling dataLoaded (see top of this file)
 $(document).ready(function() {
 	dataLoaded();
-}); 
+});

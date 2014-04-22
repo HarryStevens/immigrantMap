@@ -40,13 +40,24 @@ function immData(imm2012) {
 		pattern : '###,###'
 	});
 	formatter.format(data, 1);
+	
+	//Default options
+	var options = {
+		colorAxis : {
+			maxValue : 25000,
+			colors : ['#fff', '#4C4646']
+		},
+		width : 900,
+		keepAspectRatio : true,
+		forceIFrame : true,
+		backgroundColor : {
+			stroke : '#000',
+			strokeWidth : 4
+		}
+	};
 
-	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery).
-	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
-	//That CSS class will be removed when a different button is clicked and becomes active.
-
-/*WORK IN PROGRESS... TRYING TO DO CONVENTION OVER CONFIGURATION WITH OPTIONS...
-	//Options
+//WORK IN PROGRESS... TRYING TO DO CONVENTION OVER CONFIGURATION WITH OPTIONS...
+	//Options on click
 	$(".button").on("click", function() {
 		var options = {};
 		var parClass = $(this).attr("class");
@@ -81,29 +92,74 @@ function immData(imm2012) {
 					strokeWidth : 4
 				}
 			}
-		}
-	});
-*/
-
-	//World
-	var worldOptions = {
-		colorAxis : {
-			maxValue : 25000,
-			colors : ['#fff', '#4C4646']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	};
-
-	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-	chart.draw(data, worldOptions);
-
-	$(".world").on("click", function() {
+		}//end africa options if
+		if (contName == "americas") {
+			options = {
+					colorAxis : {
+						maxValue : 25000,
+						colors : ['#fff', '#151B54']
+					},
+					width : 900,
+					keepAspectRatio : true,
+					forceIFrame : true,
+					region : '019',
+					backgroundColor : {
+						stroke : '#000',
+						strokeWidth : 4
+					}
+				}
+		}//end americas options if
+		if (contName == "asia") {
+			options = {
+					colorAxis : {
+						maxValue : 80000,
+						colors : ['#fff', '#7F5217']
+					},
+					width : 900,
+					keepAspectRatio : true,
+					forceIFrame : true,
+					region : '142',
+					backgroundColor : {
+						stroke : '#000',
+						strokeWidth : 4
+					}
+				}
+		}//end asia options if
+		if (contName == "europe") {
+			options = {
+					colorAxis : {
+						maxValue : 12000,
+						colors : ['#fff', '#571B7E']
+					},
+					width : 900,
+					keepAspectRatio : true,
+					forceIFrame : true,
+					region : '150',
+					backgroundColor : {
+						stroke : '#000',
+						strokeWidth : 4
+					}
+				}
+		}//end europe options if
+		if (contName == "oceania") {
+			options = {
+					colorAxis : {
+						maxValue : 2500,
+						colors : ['#fff', '#254117']
+					},
+					width : 900,
+					keepAspectRatio : true,
+					forceIFrame : true,
+					region : '009',
+					backgroundColor : {
+						stroke : '#000',
+						strokeWidth : 4
+					}
+				}
+		}//end oceania options if		
+	//Each section of code displays a different map (defined in the several options vars) and is activated when the corresponding button div is clicked (done mostly with jQuery).
+	//A class of CSS called "active" will also be applied to indicate to the user that the button has been activated and the map is showing.
+	//That CSS class will be removed when a different button is clicked and becomes active.
 		if ($(this).hasClass("active")) {
 		} else {
 			var parClass = $(this).attr("class");
@@ -112,155 +168,13 @@ function immData(imm2012) {
 			$("#nav .button").removeClass("active");
 			$(this).addClass("active");
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			chart.draw(data, worldOptions);
+			chart.draw(data, options);
 		}
-	});
+	});//end click handler
 
-	//Africa
-	var afrOptions = {
-		colorAxis : {
-			maxValue : 15000,
-			colors : ['#fff', '#330000']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '002',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	};
-
-	$(".africa").on("click", function() {
-		if ($(this).hasClass("active")) {
-		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
-			$("#mapHead").html("<h2>" + contName + "</h2>");
-			$("#nav .button").removeClass("active");
-			$(this).addClass("active");
-			var afrChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			afrChart.draw(data, afrOptions);
-		}
-	});
-
-	//Americas
-	var amOptions = {
-		colorAxis : {
-			maxValue : 25000,
-			colors : ['#fff', '#151B54']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '019',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	}
-
-	$(".americas").on("click", function() {
-		if ($(this).hasClass("active")) {
-		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
-			$("#mapHead").html("<h2>" + contName + "</h2>");
-			$("#nav .button").removeClass("active");
-			$(this).addClass("active");
-			var amChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			amChart.draw(data, amOptions);
-		}
-	});
-
-	//Asia
-	var asiaOptions = {
-		colorAxis : {
-			maxValue : 80000,
-			colors : ['#fff', '#7F5217']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '142',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	}
-
-	$(".asia").on("click", function() {
-		if ($(this).hasClass("active")) {
-		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
-			$("#mapHead").html("<h2>" + contName + "</h2>");
-			$("#nav .button").removeClass("active");
-			$(this).addClass("active");
-			var asiaChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			asiaChart.draw(data, asiaOptions);
-		}
-	});
-
-	//Europe
-	var eurOptions = {
-		colorAxis : {
-			maxValue : 12000,
-			colors : ['#fff', '#571B7E']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '150',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	}
-
-	$(".europe").on("click", function() {
-		if ($(this).hasClass("active")) {
-		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
-			$("#mapHead").html("<h2>" + contName + "</h2>");
-			$("#nav .button").removeClass("active");
-			$(this).addClass("active");
-			var eurChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			eurChart.draw(data, eurOptions);
-		}
-	});
-
-	//Oceania
-	var ocOptions = {
-		colorAxis : {
-			maxValue : 2500,
-			colors : ['#fff', '#254117']
-		},
-		width : 900,
-		keepAspectRatio : true,
-		forceIFrame : true,
-		region : '009',
-		backgroundColor : {
-			stroke : '#000',
-			strokeWidth : 4
-		}
-	}
-
-	$(".oceania").on("click", function() {
-		if ($(this).hasClass("active")) {
-		} else {
-			var parClass = $(this).attr("class");
-			var contName = parClass.split(" ")[1];
-			$("#mapHead").html("<h2>" + contName + "</h2>");
-			$("#nav .button").removeClass("active");
-			$(this).addClass("active");
-			var ocChart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
-			ocChart.draw(data, ocOptions);
-		}
-	});
-}
+	var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
+	chart.draw(data, options);
+}//end immdata
 
 //When everything is loaded, this little bit of jQuery sets the javascript in motion by calling dataLoaded (see top of this file)
 $(document).ready(function() {

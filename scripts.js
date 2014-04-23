@@ -16,7 +16,7 @@ function dataLoaded() {
 	});
 }
 
-//googleLoaded: Loads the immigration data from the json file and calls the function immData
+//googleLoaded: Loads the immigration data from the json file and calls the function mkCharts
 function googleLoaded() {
 	$.get('immigration2012.json', mkCharts, 'json');
 }
@@ -174,7 +174,7 @@ function mkCharts(imm2012) {
 			//History.js for custom URLs
 			History.pushState({
 				state : 1
-			}, "Who Wants to be an American?", "?view=" + contName);
+			}, "Who wants to be an American?", "?view=" + contName);
 			var chart = new google.visualization.GeoChart(document.getElementById('mapWrapper'));
 			chart.draw(data, options);
 
